@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="puzzle" version="0.1.3">
+ <settings>
+  <title>PUZZLE</title>
+  <revision description="created" date="1/19/21" />
+  <descriptors />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es" />
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="PUZZLE" />
+  <item name="RESPUESTAS" />
+  <item name="SOPA" />
+  <item name="MEMORAMA" />
+ </sequence>
+ <activities>
+  <activity class="@puzzles.DoublePuzzle" name="PUZZLE" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x33FF33" />
+     </style>
+     <p>RESUELVE EL SIGUIENTE PUZZLE</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x66FF33" />
+     </style>
+     <p>FELICIDADES, VAMOS POR OTRO EJERCICIO! :)</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <color background="0x99FF33" />
+     </style>
+     <p>VUELVE A INTENTARLO</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="4" border="true" image="PUZZLE.jpg">
+    <style />
+    <shaper class="@ClassicJigSaw" cols="4" rows="4" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="RESPUESTAS" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x66FF66" />
+     </style>
+     <p>ESCRIBE EL NOMBRE DE LOS SIGUIENTES OBJETOS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x99FF66" />
+     </style>
+     <p>FELICIDADES</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <color background="0x99FF33" />
+     </style>
+     <p>VUELVE A INTENTARLO</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="700.0" cellHeight="500.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0" image="LAPTOP.jpg">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell id="1" image="MOUSE.jpg">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell id="2" image="PANTALLA.jpg">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell id="3" image="TECLADO.jpg">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell id="4" image="camara.png">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+    <cell id="5" image="CARPETA.png">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="500.0" cellHeight="200.0" border="true" id="answers">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>LAPTOP</p>
+    </cell>
+    <cell>
+     <p>MOUSE</p>
+    </cell>
+    <cell>
+     <p>PANTALLA</p>
+    </cell>
+    <cell>
+     <p>TECLADO</p>
+    </cell>
+    <cell>
+     <p>CAMARA WEB</p>
+    </cell>
+    <cell>
+     <p>CARPETA</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="SOPA" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x99FF99" />
+     </style>
+     <p>RESUELVE LA SIGUIENTE SOPA DE LETRAS</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x99FF99" />
+     </style>
+     <p>FELICIDADES, LO HAS LOGRADO!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <color background="0x99FF99" />
+     </style>
+     <p>VUELVE A INTENTARLO</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="22" columns="14" cellWidth="19.0" cellHeight="20.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>***************C******</row>
+     <row>***************A******</row>
+     <row>*************C*M*****M</row>
+     <row>**********P**O*A*****O</row>
+     <row>*COMPUTACION*M*R*****U</row>
+     <row>**********T**P*A*****S</row>
+     <row>P**T******P**U*W*****E</row>
+     <row>A**E******A**T*E******</row>
+     <row>N**C******L**A*B******</row>
+     <row>T**L*********D********</row>
+     <row>A**A*********O********</row>
+     <row>L**D*******CARPETA****</row>
+     <row>L**O*********A********</row>
+     <row>A*********************</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">CARPETA</clue>
+    <clue id="1">PANTALLA</clue>
+    <clue id="2">CAMARAWEB</clue>
+    <clue id="3">COMPUTADORA</clue>
+    <clue id="4">LAPTOP</clue>
+    <clue id="5">TECLADO</clue>
+    <clue id="6">COMPUTACION</clue>
+    <clue id="7">MOUSE</clue>
+   </clues>
+  </activity>
+  <activity class="@memory.MemoryGame" name="MEMORAMA" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0x99FF99" />
+     </style>
+     <p>RESUELVE EL SIGUIENTE MEMORAMA</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x66FF33" />
+     </style>
+     <p>FELICIDADES</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <color background="0x66FF66" />
+     </style>
+     <p>VUELVE A INTENTARLO</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="2" cols="2" cellWidth="50.0" cellHeight="30.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="2" />
+    <cell image="GOOGLE.jpg" />
+    <cell image="EXCEL.jpg" />
+    <cell image="PAINT.jpg" />
+    <cell image="WORD.jpg" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="EXCEL.jpg" file="excel.jpg" />
+  <media name="GOOGLE.jpg" file="google.jpg" />
+  <media name="LAPTOP.jpg" file="laptop.jpg" />
+  <media name="MOUSE.jpg" file="mouse.jpg" />
+  <media name="PAINT.jpg" file="paint.jpg" />
+  <media name="PANTALLA.jpg" file="pantalla.jpg" />
+  <media name="PUZZLE.jpg" file="puzzle.jpg" />
+  <media name="TECLADO.jpg" file="teclado.jpg" />
+  <media name="WORD.jpg" file="word.jpg" />
+  <media name="camara.png" file="camara.png" />
+  <media name="CARPETA.png" file="carpeta.png" />
+ </mediaBag>
+</JClicProject>
+
